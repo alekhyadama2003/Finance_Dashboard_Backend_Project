@@ -1,72 +1,67 @@
-# 💰 Finance Dashboard Backend
+# 💰 Finance Dashboard Backend (Spring Boot)
 
-## 📌 Project Description
-This is a Finance Management Backend application built using Spring Boot.  
-It allows users to manage income and expense records through REST APIs.
-
-The system supports adding, updating, deleting, and retrieving financial data along with useful insights like balance calculation and category-wise summaries.
+## 📌 Project Overview
+This is a backend REST API for managing financial records like income and expenses.  
+It supports CRUD operations, filtering, and dashboard summary features.
 
 ---
 
-## 🚀 Features
-- Add Income & Expense Records
-- Update Existing Records
-- Delete Records
-- View All Financial Data
-- Calculate Total Income
-- Calculate Total Expense
-- View Remaining Balance
-- Category-wise Summary
-- Filter Records by Date
-- Basic Role-based Access Control (ADMIN)
-
----
-
-## 🛠️ Tech Stack
+## 🚀 Tech Stack
 - Java
 - Spring Boot
-- Spring Web (REST APIs)
-- Spring Data JPA
-- Hibernate
-- H2 Database
+- Spring Data JPA (Hibernate)
+- MySQL (migrated from H2)
 - Maven
 - Lombok
-- Postman (API Testing)
-- Git & GitHub
+
+---
+
+## ⚙️ Features
+- ✅ Create, Read, Update, Delete Financial Records
+- ✅ Category-wise Summary
+- ✅ Total Income & Expense APIs
+- ✅ Balance Calculation
+- ✅ Filter by Date
+- ✅ Role-Based Access Control (ADMIN)
+- ✅ Global Exception Handling
 
 ---
 
 ## 📂 API Endpoints
 
-### 🔹 Create Record
-POST /api/finance
+### Create Record
+POST `/api/finance`
 
-### 🔹 Get All Records
-GET /api/finance
+### Get All Records
+GET `/api/finance`
 
-### 🔹 Update Record
-PUT /api/finance/{id}
+### Delete Record
+DELETE `/api/finance/{id}`
 
-### 🔹 Delete Record
-DELETE /api/finance/{id}
+### Update Record
+PUT `/api/finance/{id}`
 
-### 🔹 Get Total Income
-GET /api/finance/income
+### Get Income
+GET `/api/finance/income`
 
-### 🔹 Get Total Expense
-GET /api/finance/expense
+### Get Expense
+GET `/api/finance/expense`
 
-### 🔹 Get Balance
-GET /api/finance/balance
+### Get Balance
+GET `/api/finance/balance`
 
-### 🔹 Category Summary
-GET /api/finance/category-summary
-
-### 🔹 Filter by Date
-GET /api/finance/by-date?date=YYYY-MM-DD
+### Category Summary
+GET `/api/finance/category-summary`
 
 ---
 
-## ▶️ How to Run the Project
+## 🗄️ Database
+- Initially used H2 (in-memory DB)
+- Migrated to MySQL for persistent storage
 
-1. Clone the repository:
+---
+
+## ▶️ How to Run
+```bash
+mvn clean install
+mvn spring-boot:run
