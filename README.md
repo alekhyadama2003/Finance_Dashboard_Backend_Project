@@ -57,7 +57,7 @@ GET `/api/finance/category-summary`
 
 ## 🗄️ Database
 - Initially used H2 (in-memory DB)
-- Migrated to MySQL for persistent storage
+- Migrated to SQL for persistent storage
 
 ---
 
